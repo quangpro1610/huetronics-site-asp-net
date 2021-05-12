@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin_Admin" %>
+
+<%@ Register src="Admin_LeftControl.ascx" tagname="Admin_LeftControl" tagprefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Trang Quản Trị</title>
+    <link href="css/AccordionStyle.css" rel="stylesheet" type="text/css" />
+    <link href="css/leftmenu.css" rel="stylesheet" type="text/css" />
+    <link href="css/Admin.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server" class="body">
+    <div>
+        <table style="width:100%;" class="Menu">
+            <tr>
+                <td align="left" 
+                    style="border: 1px dashed #000000; font-family: 'Times New Roman', Times, serif; font-size: medium; font-weight: bold; color: #FFFFFF; text-transform: capitalize; background-color: #0066FF;">
+                    <asp:Label ID="Label1" runat="server" Text="Chào:"></asp:Label>
+                    <asp:LinkButton ID="lnkbtnAdmin" runat="server" ForeColor="White" 
+                        onclick="lnkbtnAdmin_Click"></asp:LinkButton>
+                </td>
+                <td align="center" 
+                    
+                    
+                    style="border: 1px dashed #000000; font-family: 'Times New Roman', Times, serif; font-size: xx-large; font-weight: bold; color: #FFFFFF; text-transform: capitalize; background-color: #0066FF;" 
+                    rowspan="3">
+                    &nbsp;TRANG QUẢN TRỊ&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="left" 
+                    
+                    
+                    style="border: 1px dashed #000000; font-family: 'Times New Roman', Times, serif; font-size: medium; font-weight: bold; color: #FFFFFF; text-transform: capitalize; background-color: #0066FF;">
+                    <asp:LinkButton ID="lnkbtnHome" runat="server" ForeColor="White" 
+                        onclick="lnkbtnHome_Click">Về trang chủ sản phẩm</asp:LinkButton>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" 
+                    
+                    
+                    style="border: 1px dashed #000000; font-family: 'Times New Roman', Times, serif; font-size: medium; font-weight: bold; color: #FFFFFF; text-transform: capitalize; background-color: #0066FF;">
+                    <asp:LinkButton ID="lnkbtnThoat" runat="server" ForeColor="White" 
+                        onclick="lnkbtnThoat_Click">Thoát</asp:LinkButton>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 200px" valign="top" class="left">
+                    <uc1:Admin_LeftControl ID="Admin_LeftControl1" runat="server" />
+                </td>
+                <td valign="top" class="right">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,256 @@
+﻿.body
+{
+    font: normal 12px Tahoma;
+    background-color: #DDD;
+    margin: 0;
+    padding: 0;
+}
+.main
+{
+    width:1000px;
+    border:1px solid #bbb;
+    margin:0 auto;
+    margin-top:-8px;
+}
+.header
+{
+    width: auto; 
+    height: 120px; 
+    margin: 0;
+    padding: 0;
+}
+.footer
+{
+    background-color: #970000;
+    width: 1004px;
+    height: 142px;
+}
+.copyright
+{
+    background-color: #970000;
+    width: 1004px;
+    height: 150px;
+}
+.copyright1
+{
+    background-color: #970000;
+    width: 250px;
+    height: 142px;
+}
+.topheader
+{
+     width: 1000px;
+     height: 44px;
+     background: url(../Images/hd1.png) no-repeat top left;
+}
+.midheader
+{
+    height: 38px;
+    width: auto;
+    background: url(../Images/hd2.png) no-repeat top left;
+    padding-left: 268px;
+}
+.bottomheader
+{
+    width: 1000px;
+    height: 37px;
+    background: url(../Images/hd3.png) no-repeat top left;
+    font-family:Tahoma;
+}
+#banner
+{
+    height:250px;
+    background-color:White;
+}
+.left
+{
+    width: 200px;
+    border: 1px solid #bbb;
+    vertical-align:top;
+    background-color:White;
+}
+.right
+{
+    width: 200px;
+    border: 1px solid #bbb;
+    vertical-align:top;
+}
+.middle
+{
+    width: 800px;
+    border: 1px solid #bbb;
+    background-color:White;
+}
+.footerbottom
+{
+    width: 1004px;
+    float: left;
+}
+.footerbottomleft
+{       
+    height: 103px;
+    float: left;
+    width: 157px;
+    background: url(../Images/left.gif) no-repeat top left;
+}
+.footerbottomcenter
+{
+    height: 104px;
+    float: left;
+    width: 650px;
+}
+.footerbottomright
+{
+    height: 104px;
+    float: left;
+    width: auto;
+}
+.support
+{
+    height: 38px;
+    background: url(../Images/support.gif) repeat-x top left;
+}
+.support_title 
+{
+    float: left;
+    background: url(../Images/support_bg.gif) repeat-x top left;
+}
+.support_title_left
+ {
+    background: url(../Images/support_left.gif) no-repeat top left;
+}
+.support_title_right 
+{
+    background: url(../Images/support_right.gif) no-repeat top right;
+    line-height: 38px;
+    color: white;
+    text-align: center;
+    padding: 0 30px;
+    font-family:Arial;
+}
+.bottombar
+{
+    width:200px;
+    height:30px;
+    background:url(../Images/bottom_bar.png) no-repeat;
+    font-family:Arial;
+    font-size:18px;
+    font-weight:bold;
+    color:White;
+    vertical-align:top;
+    text-align:center;
+}
+.bg_tukhoa {
+background: url(../Images/bg_search.png) no-repeat;
+width: 173px;
+height: 38px;
+float: left;
+}
+.tukhoa {
+border-style: none;
+    border-color: inherit;
+    border-width: 0;
+    margin-top: 10px;
+    width: 135px;
+    margin-left: 10px;
+    background-color:transparent;
+    font-family: "Courier New";
+}
+a:link
+{
+    color:black;
+    text-decoration:none;
+}
+a:hover
+{
+    color:Green;
+    text-decoration:underline;
+}
+a:active
+{
+    color:black;
+    text-decoration:none;
+}
+.luottruycap{
+height: 70px;
+float: left;
+background: url(../Images/counter_bg.gif) repeat-x;
+padding-top: 15px;
+}
+.luottruycap1{
+height: 70px;
+float: left;
+width: 13px;
+background: url(../Images/counter_left.gif) no-repeat top left;
+}
+.luottruycap2{
+height: 70px;
+float: right;
+width: 13px;
+background: url(../Images/counter_right.gif) no-repeat top left;
+}
+.counter {
+float: left;
+margin-top: 15px;
+}
+.one-support {
+padding: 10px 0px;
+}
+.btnchitiet {
+cursor:pointer;
+background:#999;
+color:#666;
+font-weight:bold;
+padding: 1px 2px;
+width:90px;
+height:30px;
+background:url(../Images/chitiet.png)  no-repeat;
+}
+.btnthemgio {
+cursor:pointer;
+background:#999;
+color:#666;
+font-weight:bold;
+padding: 1px 2px;
+width:90px;
+height:30px;
+background:url(../Images/themvaogio.png) no-repeat;
+}
+.icon-support {
+float: left;
+display: inline-block;
+width: 85px;
+margin-left:30px;
+}
+.cart {
+background-color: white;
+margin-top: -1px;
+}
+.phantrang
+{
+    padding: 0px 5px 0px 255px;
+    vertical-align: middle;
+}
+.cangiua
+{
+    margin-left: 180px;
+}
+.link
+{
+    background: url(../Images/link.png) no-repeat;
+    width: 220px;
+    height: 70px;
+    float: right;
+    margin-top:5px;
+    margin-right: 10px;
+}
+.ul-list {
+margin-left:-20px;
+margin-top: 5px;
+list-style: url(../Images/bullet.jpg) outside;
+}
+.top5
+{
+    margin-left: 45px;
+    text-align: center;
+}

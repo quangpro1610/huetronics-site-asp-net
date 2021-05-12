@@ -1,0 +1,43 @@
+﻿    a {
+	font-family:Tahoma;
+	font-size:13px;
+	text-decoration: none;
+ 	color:#303030;
+    }
+    a:hover {
+	    font-size: 13px;
+	    COLOR:Maroon;
+ 	    font-family: Tahoma;
+ 	    border-bottom:1px solid #ddd;
+    }
+    .divframe_headSelected
+    {
+	    background: #fff url(../Menu/Images/headselected.png);
+	    line-height:24px;
+	    height:25px;
+	    padding-left:10px;
+	    text-align:left;
+	    border-bottom: 1px solid #CCC;
+	    margin: 0px 0px 0px 0px;
+	    font-weight:bold;
+    }
+    .accoditionContent
+    {
+	    border: 1px dashed #CCC;
+	    border-top: none;
+        padding: 5px;
+        text-align:left;
+        line-height:25px;
+        padding-top: 10px;
+    }
+    .accoditionHeader
+    {
+	    background: #fff url(../Menu/Images/Title_bg.jpg);
+	    line-height:24px;
+	    height:25px;
+	    text-align:left;
+	    padding-left:10px;
+	    border-bottom: 1px solid #CCC;
+	    margin: 0px 0px 0px 0px;
+	    font-weight:bold;
+    }

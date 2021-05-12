@@ -1,0 +1,30 @@
+﻿.body
+{
+    background: url(../Images/pagebg.png) repeat-x;    
+}
+.main
+{
+    background-color:#6fc;
+    border:1px solid black;
+    
+}
+.lb
+{
+    font-weight:bold;   
+}
+.tb
+{
+    width:150px;
+}
+.left{ width:200px; border:1px solid black;}
+.right{width:800px; border:1px solid black;}
+a:link
+{
+    color:black;
+    text-decoration:none;
+}
+a:hover
+{
+    color:#33CCFF;
+    text-decoration:underline;
+}

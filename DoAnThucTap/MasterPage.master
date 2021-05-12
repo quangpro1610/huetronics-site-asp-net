@@ -1,0 +1,303 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Register Namespace="Encosia" Assembly="HighslideImage" TagPrefix="encosia" %>
+<%@ Register src="Ctrl/ucSubmenu.ascx" tagname="ucSubmenu" tagprefix="uc1" %>
+
+<%@ Register src="Ctrl/ucDangnhap.ascx" tagname="ucDangnhap" tagprefix="uc2" %>
+
+<%@ Register src="Ctrl/ucLuottruycap.ascx" tagname="ucLuottruycap" tagprefix="uc3" %>
+
+<%@ Register src="Ctrl/DangXuat.ascx" tagname="DangXuat" tagprefix="uc4" %>
+
+<%@ Register src="Ctrl/Hangmoinhap.ascx" tagname="Hangmoinhap" tagprefix="uc5" %>
+
+<%--<%@ Register src="Ctrl/Hangmoinhap.ascx" tagname="Hangmoinhap" tagprefix="uc5" %>--%>
+<%--<%@ Register src="Ctrl/ucSlide.ascx" tagname="ucSlide" tagprefix="uc2" %>--%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Đồ Án Thực Tập - Website giới thiệu máy tính Công ty HueTronics </title>
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/Menu.css" rel="stylesheet" type="text/css" />
+    <link href="Lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+    <script src="Lightbox/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <%--<script src="Slide/jquery-1.2.6.min.js" type="text/javascript"></script>--%>
+    <script src="Slide/jquery-ui.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#featured > ul").tabs({
+                fx: {
+                    opacity: "toggle"
+                }
+            }).tabs("rotate", 2000, true);
+        });
+</script>
+ <style type="text/css">
+	#featured{
+	position:relative; 
+	border:0;
+	height:252px;
+	background:#fff;
+	margin-left: 40px;
+	}
+	#featured ul.ui-tabs-nav{
+	position:absolute;
+	top:0; 
+	right: 45px;
+	list-style:none;
+	padding:0; margin:0;
+	width:210px;
+	}
+	#featured ul.ui-tabs-nav li{
+	padding:1px 0; padding-left:13px;
+	font-size:12px;
+	color:#666;
+	}
+	#featured ul.ui-tabs-nav li img{
+	float:left; 
+	margin:2px 5px;
+	background:#fff;
+	padding:2px;
+	border:1px solid #eee;
+	}
+	#featured ul.ui-tabs-nav li span{
+	font-size:11px; 
+	font-family:Verdana;
+	line-height:12px;
+	color:#034E8F;
+	}
+	#featured li.ui-tabs-nav-item a{
+	display:block;
+	height:48px;
+	color:#333; 
+	background:#fff;
+	line-height:20px;
+	}
+	#featured li.ui-tabs-nav-item a:hover{
+	background:#f2f2f2;
+	}
+	#featured li.ui-tabs-selected{
+	background: left -5px no-repeat;
+	}
+	#featured ul.ui-tabs-nav li.ui-tabs-selected a{
+	background:#ccc;
+	}
+	#featured .ui-tabs-panel{
+	width:720px;
+	height:250px;
+	/*background:#999;*/
+	position:relative;
+	}
+	#featured .ui-tabs-panel .info{
+	position:absolute;
+	top:196px;
+	left:2px;
+	height:55px;
+	width:720px;
+	background: rgba(0, 0, 0, .5);
+	}
+	#featured .info h2{
+	font-size:12px; 
+	font-family:Georgia, serif;
+	color:blue; 
+	padding:5px; 
+	margin:0;
+	overflow:hidden;
+	}
+	#featured .info p{
+	margin:0 5px;
+	font-family:Verdana; 
+	font-size:11px;
+	line-height:15px; 
+	color:blue;
+	}
+	#featured .info a{
+	text-decoration:none;
+	color: yellow;
+	}
+	#featured .info a:hover{
+	text-decoration:underline;
+	}
+	#featured .ui-tabs-hide{
+	display:none;
+	}
+	#featured .ui-tabs-panel img
+	{
+	    margin-left:200px;
+	}
+	#featured .ui-tabs-nav-item img{
+	height:37px;
+	width:55px;
+	}
+     .style1
+     {
+         height: 37px;
+     }
+ </style>
+</head>
+<body>
+    <form id="form1" runat="server" class="body">
+    <div class="main">
+    <div class="header">
+        <div class="topheader">
+            <uc4:DangXuat ID="DangXuat" runat="server" />
+        </div>
+        <div class="midheader">
+          <div class="main_menu">
+            <ul class="nav">
+            <li class="top">
+            <a href="Default.aspx" class="top_link"><span>Trang chủ</span></a>
+            <a href="" class="top_link"><span>Sản phẩm</span></a>
+            <a href="GioiThieu.aspx" class="top_link"><span>Giới thiệu</span></a>
+            <a href="LienHe.aspx" class="top_link"><span>Liên hệ</span></a>
+            <a href="DangKy.aspx" class="top_link"><span>Đăng ký</span></a>
+            <div class="bg_tukhoa">
+                <asp:TextBox ID="txtFind" runat="server" CssClass="tukhoa" Width="150px" value="Nhập từ khóa..." onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"></asp:TextBox>
+                </div>
+            <div style="float:left"><asp:ImageButton ID="btFind" runat="server"
+                                ImageAlign="Top" ImageUrl="~/Images/bt_search.png" 
+                                onclick="btFind_Click" /></div>
+            </li>
+            </ul>
+            </div>
+        </div>
+        <div class="bottomheader">
+        </div> 
+        </div>
+        <div id="banner">
+        <asp:Literal ID="ltlSlide" runat="server"></asp:Literal>
+        </div>
+        <div class="cart">
+            <table style="width:100%;">
+                <tr>
+                    <td align="right" style="background-color: #FFFFFF">
+                        <asp:ImageButton ID="btnCart" runat="server" ImageUrl="~/Images/cart.png" 
+                            onclick="btnCart_Click" ToolTip="Xem giỏ hàng" />
+&nbsp;Tổng số sản phẩm: <asp:Label ID="lblTongsosp" runat="server" Font-Bold="True" ForeColor="#CC0000"></asp:Label>
+                        ,Tổng tiền: <asp:Label ID="lblTongtien" runat="server" Font-Bold="True" 
+                            ForeColor="#CC0000"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+<div>
+ <table style="width:100%;">
+<tr>
+         <td class="left" valign="top">
+                        <table style="width:100%;">
+                            <tr>
+                                <td class="bottombar" runat="server" id="btbar" valign="top">
+                                    Đăng nhập</td>
+                            </tr>
+                            <tr>
+                                <td class="style1" valign="top">
+                                    <uc2:ucDangnhap ID="ucDangnhap" runat="server" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bottombar">
+                                    Danh mục sản phẩm</td>
+                            </tr>
+                            <tr>
+                                <td class="style1" valign="top">
+                                    <uc1:ucSubmenu ID="ucSubmenu" runat="server" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bottombar" id="bottombar" valign="top">
+                                    Sản phẩm mới</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <uc5:Hangmoinhap ID="Hangmoinhap1" runat="server" />
+                                </td>
+                            </tr>
+                        </table>
+                    
+                        </td>
+                    <td class="middle" valign="top">
+                      
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                      
+                    </td>
+                    
+                </tr>
+</table>
+            <div class="copyright">
+                <table style="width: 100%;">
+                    <tr>
+                        <td class="copyright1">
+                            <asp:ImageButton ID="btnSamsung" runat="server" Height="70px" ImageAlign="Top" 
+                                ImageUrl="~/Images/samsung.png" onclick="btnSamsung_Click"
+                                ToolTip="SamSung - Không có gì là khó tưởng tượng" Width="250px" />
+                        </td>
+                        <td class="copyright1">
+                            <asp:ImageButton ID="btLg" runat="server" Height="70px" ImageAlign="Top" 
+                                ImageUrl="~/Images/Lg.png" ToolTip="LG - LifeGood" Width="250px" 
+                                onclick="btLg_Click" />
+                        </td>
+                        <td class="copyright1">
+                            <asp:ImageButton ID="btnHuetronic" runat="server" Height="70px" 
+                                ImageAlign="Top" ImageUrl="~/Images/huetronics.png" 
+                                ToolTip="Huetronics - Thỏa mãn tiện nghi cuộc sống" Width="250px" 
+                                onclick="btnHuetronic_Click" />
+                        </td>
+                        <td class="copyright1">
+                        <div class="link">
+                        <ul class="ul-list">
+                        <b style="color: #000080">Công ty cổ phần Huetronics</b>
+                        <li>Điện thoại: 1800.588.825</li>			
+                        <li>Email: <a href="mailto:info@huetronics.vn">info@huetronics.vn</a></li>
+			            <li>Website: <a href="http://huetronics.vn/" >www.huetronics.vn</a></li>
+                        </ul>
+                        </div>  
+             </td>
+                    </tr>
+                    </table>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="support">
+                <div class="support_title">
+                <div class="support_title_left">
+                    <div class="support_title_right">
+                        Hỗ trợ trực tuyến</div>
+                </div>
+                </div>
+            </div>
+            <div class="footerbottom">
+                <div class="footerbottomleft">
+                    <div class="one-support">
+                    <a class="icon-support" href="ymsgr:sendim?viaiemradi_321" title="Mr.Quang: 0164.98.234.97">
+                        <img src="Images/support1.png" alt="Hỗ trợ trực tuyến" align="right" 
+                            height="38" width="84"/></a>
+                     </div>
+                    <div class="one-support">
+                    <a class="icon-support" href="ymsgr:sendim?thechon1710" title="Mr.Coi: 01688.235.501">
+                        <img src="Images/support1.png" alt="Hỗ trợ trực tuyến" align="right" 
+                            height="38" width="84"/></a>
+                    </div>
+                </div>
+                <div class="footerbottomcenter">
+                <p style="text-align: center; color: #FFFFFF;"><strong>Đồ Án Thực Tập - Website Huetronics</strong><br/>
+                <span>Website được thiết kế bởi</span><br/>
+                <span>Nguyễn Hữu Chơn - Hoàng Văn Quang - Nguyễn Xuân Huy - Nguyễn Văn Thắng</span><br/>
+                    Lớp 09CDTH02 - Email: 09cdth02@gmail.com</p>
+                </div>
+                <div class="footerbottomright">
+                <div class="counter">
+                <div class="luottruycap1"></div>
+                <div class="luottruycap">
+                    <uc3:ucLuottruycap ID="ucLuottruycap1" runat="server" />
+                    </div>
+                 <div class="luottruycap2"></div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
